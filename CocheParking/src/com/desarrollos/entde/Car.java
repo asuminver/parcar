@@ -1,13 +1,14 @@
 package com.desarrollos.entde;
 
-import java.util.Arrays;
-import java.awt.Color;
+//import java.util.Arrays;no se usa
+//import java.awt.Color; no se usa
 /**
  * Class that models objects of type "car"
  * 
  * @Java MOOC team, UC3M
  * @2.0
  */
+
 public class Car
 {
     // Attributes of the class Car
@@ -26,14 +27,14 @@ public class Car
      * Method that is being always invoked when the program is running
      * @throws InterruptedException 
      */
-    public static void main(string[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException{//string
     	Garage g = new Garage();
-    	Car car = new Car(g);
+   // 	Car car = new Car(g); Esta linea ya no se usa
         accelerate();
         slowDown();
         moveDown();
         accelerate();
-        car.printGarage();
+        g.printGarage();//car -> g
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -43,10 +44,10 @@ public class Car
      * Accelerate the car
      * @throws InterruptedException 
      */
-    public void accelerate() throws InterruptedException{
-        string c = new string("*");
-        string space = new string(" ");
-    	for(int i=0, i<5; i++)
+    public static void accelerate() throws InterruptedException{//añadir static
+        String c = new String("*");//string c = new string("*");
+        String space = new String(" ");//string space = new string(" ");
+        for(int i=0; i<5; i++)//for(int i=0, i<5; i++)
         {
         	System.out.print(c);
         	c = space.concat(c);
@@ -58,8 +59,8 @@ public class Car
      * Slow down the car
      * @throws InterruptedException 
      */
-    public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    public static void slowDown() throws InterruptedException{//añadir static
+    	String c = new String("     *");//S
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -73,9 +74,9 @@ public class Car
      * Move the car downwards
      * @throws InterruptedException 
      */    
-    public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    public static void moveDown() throws InterruptedException{//añadir static
+    	String c = new String("\t\t\t\t  *");//Añadir S y quitar ) del final
+    	for(int i=0; i<5; i++)//sustituir , por ; en for
         {
     		if(i!=4)
     			System.out.println(c);
