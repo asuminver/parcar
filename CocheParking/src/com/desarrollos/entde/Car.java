@@ -1,7 +1,4 @@
 package com.desarrollos.entde;
-
-import java.util.Arrays;
-import java.awt.Color;
 /**
  * Class that models objects of type "car"
  * 
@@ -26,14 +23,14 @@ public class Car
      * Method that is being always invoked when the program is running
      * @throws InterruptedException 
      */
-    public static void main(string[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException{
     	Garage g = new Garage();
     	Car car = new Car(g);
-        accelerate();
-        slowDown();
-        moveDown();
-        accelerate();
-        car.printGarage();
+        car.accelerate();
+        car.slowDown();
+        car.moveDown();
+        car.accelerate();
+        g.printGarage();
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -44,9 +41,9 @@ public class Car
      * @throws InterruptedException 
      */
     public void accelerate() throws InterruptedException{
-        string c = new string("*");
-        string space = new string(" ");
-    	for(int i=0, i<5; i++)
+       String c = new String("*");
+        String space = new String(" ");
+    	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
         	c = space.concat(c);
@@ -59,7 +56,7 @@ public class Car
      * @throws InterruptedException 
      */
     public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    	String c = new String("     *");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -74,8 +71,8 @@ public class Car
      * @throws InterruptedException 
      */    
     public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    	String c = new String("\t\t\t\t  *");
+    	for(int i=0; i<5; i++)
         {
     		if(i!=4)
     			System.out.println(c);
