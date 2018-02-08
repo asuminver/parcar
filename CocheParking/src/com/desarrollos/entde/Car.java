@@ -1,7 +1,7 @@
 package com.desarrollos.entde;
 
-import java.util.Arrays;
-import java.awt.Color;
+//import java.util.Arrays;
+//import java.awt.Color;
 /**
  * Class that models objects of type "car"
  * 
@@ -30,10 +30,11 @@ public class Car
     	Garage g = new Garage();
     	Car car = new Car(g);
         car.accelerate();
-        slowDown();
-        moveDown();
-        accelerate();
-        car.printGarage();
+        car.slowDown();
+        car.moveDown();
+        car.accelerate();
+        Garage.printGarage();
+        //he agregado el nombre de la clase para que se pueda ejecutar el metodo y desabilitado los metodos que estaban sin definir
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -47,6 +48,7 @@ public class Car
         String c = new String("*");
         String space = new String(" ");
     	for(int i=0; i<5; i++)
+            //las s de string deben ser mayusculas
         {
         	System.out.print(c);
         	c = space.concat(c);
@@ -59,7 +61,7 @@ public class Car
      * @throws InterruptedException 
      */
     public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    	String c = new String("     *");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -74,15 +76,18 @@ public class Car
      * @throws InterruptedException 
      */    
     public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
-        {
-    		if(i!=4)
+    	String c = new String("\t\t\t\t  *");
+    	for(int i=0; i<5; i++);
+        { 
+    		if(numberWheels !=4)
     			System.out.println(c);
+    		//he cambiado la variable i por el atributo numberwheels
     		else 
     			System.out.print(c);
         	Thread.sleep(1000);
+        	
         }
+        
     }
     
 }
