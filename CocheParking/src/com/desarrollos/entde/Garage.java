@@ -4,6 +4,6 @@ public class Garage{
     
     public void printGarage() 
     {
-        system.out.print("|*]");
+        System.out.print("|*]");  //sustituir la s de la instrucción system por S mayuscula
     }
 }

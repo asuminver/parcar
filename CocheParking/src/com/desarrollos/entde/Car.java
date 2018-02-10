@@ -30,10 +30,10 @@ public class Car
     	Garage g = new Garage();
     	Car car = new Car(g);
         car.accelerate();
-        slowDown();
-        moveDown();
-        accelerate();
-        car.printGarage();
+        car.slowDown();     //añadir el objeto car para que la llamada al metodo funcione correctamente
+        car.moveDown();		 //añadir el objeto car para que la llamada al metodo funcione correctamente
+        car.accelerate();	 //añadir el objeto car para que la llamada al metodo funcione correctamente
+        g.printGarage();	//modificar el objeto car por g para que funcione la llamada al metodo
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -59,7 +59,7 @@ public class Car
      * @throws InterruptedException 
      */
     public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    	String c = new String("     *");   //Cambiar la s de la instruccion string por S mayuscula
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -74,8 +74,8 @@ public class Car
      * @throws InterruptedException 
      */    
     public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    	String c = new String("\t\t\t\t  *");  //Cambiar la s de la instruccion string por S mayuscula y eleminar un parentesis
+    	for(int i=0; i<5; i++)           // sustituir las comas por ;
         {
     		if(i!=4)
     			System.out.println(c);
