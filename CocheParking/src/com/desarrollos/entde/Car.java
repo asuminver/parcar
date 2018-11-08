@@ -1,7 +1,5 @@
 package com.desarrollos.entde;
 
-import java.util.Arrays;
-import java.awt.Color;
 /**
  * Class that models objects of type "car"
  * 
@@ -30,16 +28,21 @@ public class Car
     	Garage g = new Garage();
     	Car car = new Car(g);
         car.accelerate();
-        slowDown();
-        moveDown();
-        accelerate();
+        //Hay que añadir la clase car
+        car.slowDown();
+        car.moveDown();
+        car.accelerate();
         car.printGarage();
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
     }    
 
-    /**
+    private void printGarage() {
+		// TODO Auto-generated method stub
+		
+	}
+	/**
      * Accelerate the car
      * @throws InterruptedException 
      */
@@ -59,7 +62,8 @@ public class Car
      * @throws InterruptedException 
      */
     public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    	//Poner String en vez de string
+    	String c = new String("     *");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -74,8 +78,10 @@ public class Car
      * @throws InterruptedException 
      */    
     public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    	//Poner String en vez de string
+    	String c = new String("\t\t\t\t  *");
+    	//Cambiar comas por punto y coma
+    	for(int i=0; i<5; i++)
         {
     		if(i!=4)
     			System.out.println(c);
